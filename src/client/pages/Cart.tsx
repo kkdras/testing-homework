@@ -60,7 +60,7 @@ export const Cart: React.FC = () => {
                 <tfoot>
                     <tr>
                         <td colSpan={4}>Order price:</td>
-                        <td className={bem('OrderPrice')}>${total}</td>
+                        <td data-testid="total-price" className={bem('OrderPrice')}>${total}</td>
                     </tr>
                 </tfoot>
             </table>
@@ -68,7 +68,7 @@ export const Cart: React.FC = () => {
     } else {
         content = (
             <>
-                Cart is empty. Please select products in the <Link to="/catalog">catalog</Link>.
+                Cart is empty. Please select products in the <Link data-testid="empty-cart-catalog-link" to="/catalog">catalog</Link>.
             </>
         );
     }
